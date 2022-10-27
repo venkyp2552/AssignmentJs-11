@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taking array Value from User</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <center><br><br><br>
+        <input type="text" id="a1" name="arr[]" value=""><br><br>
+        <input type="text" id="a2" name="arr[]" value=""><br><br>
+        <input type="text" id="a3" name="arr[]" value=""><br><br>
+        <input type="text" id="a4" name="arr[]" value=""><br><br>
+        <input type="text" id="a5" name="arr[]" value=""><br><br>
+        <button class="btn btn-primary" onclick="TakingArray()">Submit</button>
+    </center>
+    <script type="text/javascript">
+        function TakingArray(){
+            let newArray=[]
+            let ar1=Number(document.getElementById('a1').value)
+            let ar2=Number(document.getElementById('a2').value)
+            let ar3=Number(document.getElementById('a3').value)
+            let ar4=Number(document.getElementById('a4').value)
+            let ar5=Number(document.getElementById('a5').value)
+            newArray.push(ar1,ar2,ar3,ar4,ar5)
+           
+            const Original=newArray.filter((data,index)=>newArray.indexOf(data)===index)
+            const Dup=newArray.filter((data,index)=>newArray.indexOf(data)!==index)
+            console.log(Original)
+            console.log(Dup)
+
+        }
+    </script>
+</body>
+</html>
